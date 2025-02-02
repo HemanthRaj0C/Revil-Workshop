@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Scrollbar styles for Webkit browsers */
+.mirror-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mirror-scrollbar::-webkit-scrollbar-track {
+  background: #1f2937; /* Dark background for the track */
+}
+
+.mirror-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #16d9f7; /* Blue color for the thumb */
+  border-radius: 10px;
+  border: 2px solid #1f2937; /* Adds some separation between the thumb and track */
+}
+
+.mirror-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #16d9f7; /* Darker blue when hovering */
+}
+
+/* Scrollbar styles for Firefox */
+.mirror-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #16d9f7 #1f2937; /* Blue thumb, dark track */
+}
